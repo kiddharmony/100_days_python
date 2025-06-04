@@ -1,0 +1,14 @@
+# Day 2 - Tip Calculator Project
+
+print("Welcome to the tip calculator!")
+bill = float(input("What was the total bill? $"))
+tip = int(input("What percentage tip would you like to give? 10, 12, 15? "))
+people = int(input("How many people to split the bill? "))
+
+# Project Code
+tip_percentage = (1 + tip / 100)
+cost_share = (bill / people) * tip_percentage
+final_split = (round(cost_share, 2))
+# print(f"Each person should pay: ${final_split}")
+print(f"Each person should pay: ${final_split:.2f}") # ":.2f" is a format specifier to display trailing zeros two decimals for f-strings
+# print(f"Each person should pay: $%.2f" % cost_share) # "%.2f" in place of round works to print trailing zero
