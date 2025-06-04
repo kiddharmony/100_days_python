@@ -1,0 +1,103 @@
+# Day 3 - Treasure Island Project
+
+print(r'''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\ ` . "-._ /_______________|_______
+|                   | |o ;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+
+print() # story text
+print("You've woken up in a dark forest somewhere. \n"
+      "You see a small light from faraway. \n"
+      "As you walk towards it, you've come across a fork in the road.")
+print()
+print("You've reached a fork in the road. \n"
+      "Which path will you take? \n")
+
+# code for left or right path
+path = input("Left or Right? ").lower()
+print()
+if path == "left".lower():
+    print("You take the left path.")
+    # story text
+    print()
+    print("...")
+    print()
+    print("You've safely made your way out of the forest and have reached a small stream to rest. \n"
+          "Suddenly a storm starts and a flash flood causes the stream to become a dangerous river. \n"
+          "What will you do? \n")
+
+    # code for swim or wait
+    stream = input("Swim or Wait? ").lower()
+    print()
+    if stream == "wait".lower():
+        print("You choose to wait out the storm and flash flood.")
+        # story text
+        print()
+        print("...")
+        print()
+        print("Time passes and the storm subsides and the water is now safe to cross. \n"
+              "As you journey on, you've come across a wall with three colored doors. \n"
+              "Which door will you choose to open?")
+
+        # code for door choice
+        print()
+        door = input("Red, Blue, or Yellow? ").lower()
+        print()
+        if door == "red".lower():
+            print("You open the red door. A blaze of fire engulfs you. You have burned to death.")
+            print()
+            print("GAME OVER.")
+        elif door == "blue".lower():
+            print("You open the blue door. A flurry of angry beasts attack you. You have died.")
+            print()
+            print("GAME OVER.")
+        elif door == "yellow".lower():
+            print("You open the yellow door. You are greeted by fairies and awarded the treasure of the island.")
+            print()
+            print("You Win!")
+        else:
+            print("You choose to ignore the doors and climb the wall. You lost your grip and have fallen to death.")
+            print()
+            print("GAME OVER.")
+    elif stream == "swim".lower():
+        print("As you swim across, you get attacked by a starving river monster and was eaten to death.")
+        print()
+        print("GAME OVER.")
+    else:
+        print("You see a fallen tree nearby and tried to use it to cross the water. \n"
+              "The flash flood gets stronger and swept you along with the tree and you drowned to death.")
+        print()
+        print("GAME OVER.")
+
+# initial IF statement conditions to match indentation
+elif path == "right".lower():
+    print("You take the right path. \n"
+          "The path suddenly collapse and you have fallen into a hole and died.")
+    print()
+    print("GAME OVER.")
+else:
+    print("You choose to be brave and take a hidden path off to the side. \n"
+          "You encounter a pack of hungry wolves that attack you and was eaten to death.")
+    print()
+    print("GAME OVER.")
+# end game
