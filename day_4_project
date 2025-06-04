@@ -1,0 +1,64 @@
+# Day 4 - Rock, Paper, Scissors Project
+
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+# my own code starts here
+choices = [rock, paper, scissors]
+# 0 == rock, 1 == paper, 2 == scissors
+
+print('Let\'s play a game!')
+player_choice = int(input('Type 0 for Rock, 1 for Paper, or 2 for Scissors: \n')) # need to make the input a integer
+if player_choice >= 0 and player_choice <=2: # this checks for valid input between range of 0-2
+    print('Player chose: \n')
+    print(choices[player_choice])
+
+computer_choice = random.randint(0, 2)
+print('Computer chose: \n')
+print(choices[computer_choice])
+
+# all player choice vs. computer
+if player_choice >= 3 or player_choice < 0: # if player didn't enter number bigger or equal to 3 or less than 0
+    print('You didn\'t enter a valid number. You lose!')
+elif player_choice == computer_choice: # all ties
+    print('It\'s a tie!')
+elif player_choice == 0 and computer_choice == 2: # rock > scissors
+    print('Player win!')
+elif player_choice == 0 and computer_choice == 1: # rock < paper
+    print('Player lose!')
+elif player_choice == 1 and computer_choice == 0: # paper > rock
+    print('Player win!')
+elif player_choice == 1 and computer_choice == 2: # paper < scissors
+    print('Player lose!')
+elif player_choice == 2 and computer_choice == 0: # scissors < rock
+    print('Player lose!')
+elif player_choice == 2 and computer_choice == 1: # scissors > paper
+    print('Player win!')
+# elif player_choice >= 3 or player_choice < 0: # if player didn't enter number bigger or equal to 3 or less than 0
+#     print('You didn\'t enter a valid number. You lose!')
