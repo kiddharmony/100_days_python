@@ -1,0 +1,54 @@
+# Day 3 - Python Pizza Exercise
+
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M or L: ")
+pepperoni = input("Do you want pepperoni on your pizza? Y or N: ")
+extra_cheese = input("Do you want extra cheese? Y or N: ")
+bill = 0 # place holder?
+
+# To do: work out how much they need to pay based on their size choice.
+if size == "S":
+    bill += 15
+    # print("Small size selected: $15.")
+elif size == "M":
+    bill += 20
+    # print("Medium size selected: $20.")
+elif size == "L":
+    bill += 25
+    # print("Large size selected: $25")
+else:
+    print("Please enter one of the pizza size options.")
+
+# To do: work out how much to add to their bill based on their pepperoni choice.
+add_pepp = pepperoni
+if add_pepp == "Y":
+    if size == "S":
+        bill += 2
+        # print("Extra pepperoni selected: $2")
+    elif size == "M":
+        bill += 3
+        # print("Extra pepperoni selected: $3")
+    elif size == "L":
+        bill += 3
+        # print("Extra pepperoni selected: $3")
+# else:
+#     print("No extra pepperoni selected.")
+
+# To do: work out their final amount based on whether if they want extra cheese.
+add_cheese = extra_cheese
+if add_cheese == "Y":
+    if size == "S":
+        bill += 1
+        # print("Extra cheese selected: $1")
+    elif size == "M":
+        bill += 1
+        # print("Extra cheese selected: $1")
+    elif size == "L":
+        bill += 1
+        # print("Extra cheese selected: $1")
+# else:
+#     print("No extra cheese selected.")
+
+# Print total bill
+# print()
+print(f"Your final bill is: ${bill}.")
